@@ -1,5 +1,7 @@
 # serverless-lumigo
 
+
+
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/lumigo-io/serverless-lumigo-plugin/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/lumigo-io/serverless-lumigo-plugin/tree/master)
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 [![version](https://badge.fury.io/js/serverless-lumigo.svg)](https://www.npmjs.com/package/serverless-lumigo)
@@ -7,6 +9,10 @@
 [![codecov](https://codecov.io/gh/lumigo-io/serverless-lumigo-plugin/branch/master/graph/badge.svg?token=8mXE2G04ZO)](https://codecov.io/gh/lumigo-io/serverless-lumigo-plugin)
 
 Serverless framework plugin to auto-install the Lumigo tracer for Node.js and Python functions.
+
+# Propte-io Changes
+
+Propte-io has forked this plugin to allow for conditional logic. This plugin has been updated to only run for local environment, and if a token is saved in secrets. 
 
 ## TOC
 

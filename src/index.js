@@ -175,10 +175,16 @@ class LumigoPlugin {
 	}
 
 	async wrapFunctions(functionNames) {
-		const { runtime, functions } = this.getFunctionsToWrap(
+
+
+		const { runtime, functions, stage } = this.getFunctionsToWrap(
 			this.serverless.service,
 			functionNames
-		);
+			);
+
+			console.log(
+				stage
+			)
 
 		this.log(`there are ${functions.length} function(s) to wrap...`);
 		functions.forEach(fn => this.verboseLog(JSON.stringify(fn)));
@@ -186,6 +192,8 @@ class LumigoPlugin {
 		if (functions.length === 0) {
 			return;
 		}
+
+
 
 		const token = _.get(this.serverless.service, "custom.lumigo.token");
 		if (!token) {
