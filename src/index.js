@@ -177,13 +177,13 @@ class LumigoPlugin {
 	async wrapFunctions(functionNames) {
 
 
-		const { runtime, functions, stage } = this.getFunctionsToWrap(
+		const { runtime, functions } = this.getFunctionsToWrap(
 			this.serverless.service,
 			functionNames
 			);
 
 			console.log(
-				stage
+				JSON.stringify(this)
 			)
 
 		this.log(`there are ${functions.length} function(s) to wrap...`);
